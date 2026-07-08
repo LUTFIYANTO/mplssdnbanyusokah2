@@ -1,2 +1,550 @@
-# mplssdnbanyusokah2
-MPLS UPTD SDN Banyusokah2
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPLS 2026 - Selamat Datang Peserta Didik Baru</title>
+    
+    <!-- Menggunakan Tailwind CSS untuk styling yang cepat dan modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Konfigurasi Tema Tailwind (Opsional, untuk warna khusus) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1d4ed8', // Biru
+                        secondary: '#facc15', // Kuning
+                        dark: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Google: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased bg-pattern">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiaC4Y3PJwDZqhKRT444YTmCnCmp9Y1fTHMllWXCreWqTBymzQKevkXFDCzUen9vImvN-xgfKyH5OvtCJ7AbUcK0tZ2D8ByqdNXNtMp8yiMAYtUzktLpVEvQeMBmh-KoDN9aVAEW7Gmp_buLzDIg5FRwaaBu3qtZ3HpmpGTDcEMSTJitXfUyPzzWYP6RQgK/s320/Gambar_WhatsApp_2024-09-18_pukul_19.14.22_99352120-removebg-preview-removebg-preview-removebg-preview.png" 
+                         alt="Logo MPLS 2026" 
+                         class="h-12 w-auto object-contain"
+                         onerror="this.onerror=null; this.src='https://placehold.co/100x100/1d4ed8/ffffff?text=MPLS'">
+                    <span class="font-bold text-2xl tracking-tight text-primary">MPLS <span class="text-secondary">2026</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-gray-600 hover:text-primary font-semibold transition">Beranda</a>
+                    <a href="#jadwal" class="text-gray-600 hover:text-primary font-semibold transition">Jadwal</a>
+                    <a href="#tatatertib" class="text-gray-600 hover:text-primary font-semibold transition">Tata Tertib</a>
+                    <a href="#twibbon" class="bg-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-800 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        <i class="fas fa-camera-retro mr-2"></i> Twibbon
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-xl absolute w-full border-t">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#beranda" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50">Beranda</a>
+                <a href="#jadwal" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50">Jadwal</a>
+                <a href="#tatatertib" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-blue-50">Tata Tertib</a>
+                <a href="#twibbon" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-blue-50">Twibbon</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-primary font-semibold text-sm mb-4 border border-blue-200 shadow-sm animate-bounce">
+                    <i class="fas fa-bell mr-1"></i> Informasi Resmi
+                </span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-dark leading-tight">
+                    Selamat Datang <br class="hidden md:block" /> 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Peserta Didik Baru</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed">
+                    Masa Pengenalan Lingkungan Sekolah (MPLS) di UPTD SDN Banyusokah 2 Tahun Ajaran 2026/2027. Mari wujudkan generasi yang berkarakter, kreatif, dan inovatif bersama kami.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#jadwal" class="px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:bg-blue-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Lihat Jadwal <i class="fas fa-arrow-down ml-2"></i>
+                    </a>
+                    <a href="#tatatertib" class="px-8 py-4 bg-white text-gray-800 border-2 border-gray-200 rounded-full font-bold text-lg hover:border-primary hover:text-primary transition shadow-md hover:shadow-lg">
+                        Baca Panduan
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative background elements -->
+        <div class="absolute top-1/2 left-0 w-64 h-64 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-1/2 right-0 w-64 h-64 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="py-10 bg-dark text-white relative">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-semibold mb-6">MPLS 2026 Dimulai Dalam:</h2>
+            <div class="flex justify-center gap-4 md:gap-8" id="countdown">
+                <!-- Javascript will populate this -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 rounded-xl p-4 md:p-6 w-20 md:w-28 shadow-inner border border-gray-700">
+                        <span id="days" class="text-3xl md:text-5xl font-bold text-secondary">00</span>
+                    </div>
+                    <span class="mt-2 text-sm md:text-base text-gray-400">Hari</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 rounded-xl p-4 md:p-6 w-20 md:w-28 shadow-inner border border-gray-700">
+                        <span id="hours" class="text-3xl md:text-5xl font-bold text-secondary">00</span>
+                    </div>
+                    <span class="mt-2 text-sm md:text-base text-gray-400">Jam</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 rounded-xl p-4 md:p-6 w-20 md:w-28 shadow-inner border border-gray-700">
+                        <span id="minutes" class="text-3xl md:text-5xl font-bold text-secondary">00</span>
+                    </div>
+                    <span class="mt-2 text-sm md:text-base text-gray-400">Menit</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 rounded-xl p-4 md:p-6 w-20 md:w-28 shadow-inner border border-gray-700">
+                        <span id="seconds" class="text-3xl md:text-5xl font-bold text-secondary">00</span>
+                    </div>
+                    <span class="mt-2 text-sm md:text-base text-gray-400">Detik</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jadwal Section -->
+    <section id="jadwal" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-base text-primary font-bold tracking-wide uppercase">Rangkaian Acara</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Jadwal Kegiatan MPLS
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Persiapkan dirimu dan perhatikan jadwal kegiatan dari hari pertama hingga penutupan.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Hari 1 -->
+                <div class="bg-blue-50 rounded-2xl p-8 border border-blue-100 shadow-sm hover:shadow-md transition relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 shadow-md">1</div>
+                        <h3 class="text-2xl font-bold text-dark mb-2">Hari 1</h3>
+                        <p class="text-primary mb-6 font-bold">Salam Sapa, Kenali Diri & Tur Harta Karun</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-check text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Upacara bendera kondusif.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-check text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Permainan kenali diri, guru, dan teman sebaya.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-check text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Tur menjelajah sekolah ala pencarian harta karun.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-check text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Simulasi singkat kesiapsiagaan bencana.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-check text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Giat 'Operasi Semut' membersihkan laci.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hari 2 -->
+                <div class="bg-blue-50 rounded-2xl p-8 border border-blue-100 shadow-sm hover:shadow-md transition relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 shadow-md">2</div>
+                        <h3 class="text-2xl font-bold text-dark mb-2">Hari 2</h3>
+                        <p class="text-primary mb-6 font-bold">Pengukuran Kebugaran & Aturan ASRI</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-heartbeat text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Cek denyut jantung & tes fleksibilitas sederhana secara riang.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-leaf text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Pemberantasan sampah plastik lewat gerakan Sekolah ASRI.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-question text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Kuis interaktif 'Siapa Yang Tahu Aturannya?'.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-apple-whole text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Praktik mencuci tangan dan makan bekal sehat bersama.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hari 3 -->
+                <div class="bg-blue-50 rounded-2xl p-8 border border-blue-100 shadow-sm hover:shadow-md transition relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 shadow-md">3</div>
+                        <h3 class="text-2xl font-bold text-dark mb-2">Hari 3</h3>
+                        <p class="text-primary mb-6 font-bold">Jelajah Belajar Seru & Karakter G7KAIH</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-chalkboard-teacher text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Simulasi pengenalan kelas dan tata cara belajar.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-book-open text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Sesi mendengarkan cerita (storytelling) 7 Kebiasaan Baik.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-hands-helping text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Praktik meminta tolong dan permisi secara santun.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-broom text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Operasi semut menjaga kelas tetap bersih.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hari 4 -->
+                <div class="bg-blue-50 rounded-2xl p-8 border border-blue-100 shadow-sm hover:shadow-md transition relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 shadow-md">4</div>
+                        <h3 class="text-2xl font-bold text-dark mb-2">Hari 4</h3>
+                        <p class="text-primary mb-6 font-bold">Tata Tertib & Keadaban Bermedia Digital</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-gamepad text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Dongeng edukasi batasi bermain gim daring (online).</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-shield-alt text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Sesi pengenalan perlindungan fisik (mengenal sentuhan aman).</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-tooth text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Pengecekan kebersihan kuku dan gigi secara berkala.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-ban text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Sosialisasi bahaya NAPZA: kampanye jangan terima makanan dari orang asing.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hari 5 -->
+                <div class="bg-blue-50 rounded-2xl p-8 border border-blue-100 shadow-sm hover:shadow-md transition relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 shadow-md">5</div>
+                        <h3 class="text-2xl font-bold text-dark mb-2">Hari 5</h3>
+                        <p class="text-primary mb-6 font-bold">Pengenalan Kepanduan & Kesepakatan Bersama</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-campground text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Simulasi Pramuka Siaga gembira.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-handshake text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Merumuskan kesepakatan 'Sekolahku Aman dan Nyaman'.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-star text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Panggung unjuk bakat dan minat orisinal siswa.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-blue-200 text-primary flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-praying-hands text-xs"></i></div>
+                                <span class="text-sm text-gray-700 font-medium">Refleksi penutupan dengan doa bersama.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tata Tertib Section -->
+    <section id="tatatertib" class="py-20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="bg-dark px-8 py-6 flex items-center gap-4">
+                    <i class="fas fa-clipboard-list text-3xl text-secondary"></i>
+                    <h2 class="text-2xl font-bold text-white">Tata Tertib Peserta MPLS 2026</h2>
+                </div>
+                <div class="p-8 md:p-10">
+                    <div class="space-y-6">
+                        <!-- Rule Item -->
+                        <div class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800">Seragam & Penampilan</h4>
+                                <p class="text-gray-600 mt-1">Menggunakan seragam asal sekolah (SMP/MTs) dengan rapi. Rambut untuk pria maksimal 2cm dan tidak diwarnai. Siswi yang berhijab menyesuaikan, yang tidak berhijab mengikat rambut dengan rapi.</p>
+                            </div>
+                        </div>
+                        <!-- Rule Item -->
+                        <div class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800">Kehadiran</h4>
+                                <p class="text-gray-600 mt-1">Hadir 15 menit sebelum acara dimulai. Wajib mengisi absensi kehadiran yang disediakan oleh kakak pendamping gugus setiap paginya.</p>
+                            </div>
+                        </div>
+                        <!-- Rule Item -->
+                        <div class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800">Perlengkapan</h4>
+                                <p class="text-gray-600 mt-1">Membawa nametag yang telah ditentukan, alat tulis lengkap, buku catatan, serta bekal air minum dan makanan sehat dari rumah.</p>
+                            </div>
+                        </div>
+                        <!-- Rule Item -->
+                        <div class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-red-100 text-red-500 flex items-center justify-center shrink-0 mt-1">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800">Larangan</h4>
+                                <p class="text-gray-600 mt-1">Dilarang membawa senjata tajam, rokok, make-up berlebihan, perhiasan mencolok, dan memainkan handphone saat materi sedang berlangsung (kecuali diinstruksikan).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Twibbon & Resources Section -->
+    <section id="twibbon" class="py-20 bg-gradient-to-b from-white to-blue-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Siap Mengikuti MPLS?</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10">Tunjukkan antusiasmemu dengan memakai Twibbon resmi MPLS 2026 dan bagikan ke media sosialmu dengan hashtag #MPLS2026 #SiswaBaruSiap.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <!-- Twibbon Card -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-full md:w-96">
+                    <div class="bg-gray-200 w-full aspect-square rounded-xl mb-6 flex flex-col items-center justify-center border-2 border-dashed border-gray-400 relative overflow-hidden group">
+                        <!-- Placeholder frame image -->
+                        <div class="absolute inset-0 border-[16px] border-primary rounded-xl opacity-20 pointer-events-none"></div>
+                        <i class="fas fa-image text-5xl text-gray-400 mb-2"></i>
+                        <span class="text-gray-500 font-medium">Preview Twibbon</span>
+                        <div class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                             <a href="#" class="bg-white text-primary px-4 py-2 rounded-lg font-bold text-sm">Lihat Frame</a>
+                        </div>
+                    </div>
+                    <button class="w-full py-3 bg-primary text-white rounded-xl font-bold hover:bg-blue-800 transition shadow-md">
+                        <i class="fas fa-download mr-2"></i> Unduh Frame
+                    </button>
+                    <a href="https://twibbonize.com" target="_blank" class="block mt-3 text-sm text-blue-600 font-semibold hover:underline">
+                        Atau pakai langsung di Twibbonize
+                    </a>
+                </div>
+
+                <!-- Booklet Card -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 w-full md:w-80 h-full flex flex-col justify-between">
+                    <div>
+                        <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-2xl mb-4 mx-auto">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Buku Panduan MPLS</h3>
+                        <p class="text-gray-500 text-sm mb-6">Unduh file PDF yang berisi susunan panitia, pembagian gugus, lirik lagu mars sekolah, dan panduan lengkap lainnya.</p>
+                    </div>
+                    <button class="w-full py-3 bg-red-600 text-white rounded-xl font-bold hover:bg-red-700 transition shadow-md">
+                        <i class="fas fa-download mr-2"></i> Unduh PDF (2.4 MB)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-gray-700 pb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiaC4Y3PJwDZqhKRT444YTmCnCmp9Y1fTHMllWXCreWqTBymzQKevkXFDCzUen9vImvN-xgfKyH5OvtCJ7AbUcK0tZ2D8ByqdNXNtMp8yiMAYtUzktLpVEvQeMBmh-KoDN9aVAEW7Gmp_buLzDIg5FRwaaBu3qtZ3HpmpGTDcEMSTJitXfUyPzzWYP6RQgK/s320/Gambar_WhatsApp_2024-09-18_pukul_19.14.22_99352120-removebg-preview-removebg-preview-removebg-preview.png" 
+                             alt="Logo MPLS 2026" 
+                             class="h-12 w-auto object-contain brightness-110"
+                             onerror="this.onerror=null; this.src='https://placehold.co/100x100/1d4ed8/ffffff?text=MPLS'">
+                        <span class="font-bold text-2xl tracking-tight">MPLS <span class="text-secondary">2026</span></span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Website informasi resmi UPTD SDN Banyusokah 2 Masa Pengenalan Lingkungan Sekolah untuk membantu siswa baru beradaptasi dan mengenal lingkungan sekolah dengan baik.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-gray-700 pb-2 inline-block">Tautan Cepat</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beranda" class="text-gray-400 hover:text-secondary transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Beranda</a></li>
+                        <li><a href="#jadwal" class="text-gray-400 hover:text-secondary transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Jadwal Kegiatan</a></li>
+                        <li><a href="#tatatertib" class="text-gray-400 hover:text-secondary transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Tata Tertib</a></li>
+                        <li><a href="#twibbon" class="text-gray-400 hover:text-secondary transition"><i class="fas fa-chevron-right text-xs mr-2"></i> Twibbon</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white border-b border-gray-700 pb-2 inline-block">Pusat Bantuan</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <span class="text-gray-400">Dusun Masaran, Desa Banyusokah Kec. Ketapang Kab Sampang</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fab fa-whatsapp text-primary"></i>
+                            <span class="text-gray-400">Lutfiyanto, S.Pd. (+62 823-0108-9688)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span class="text-gray-400">www.sdnbanyusokah2.sch.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Panitia MPLS UPTD SDN Banyusokah 2 | Berdasarkan Rujukan Resmi Kemendikdasmen RI.</p>
+                <p class="mt-2">Pengembang |</i> Lutfiyanto, S.Pd </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect (Glassmorphism)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('py-4', 'py-0');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('py-0', 'py-4');
+            }
+        });
+        // Trigger scroll once on load to set initial state
+        window.dispatchEvent(new Event('scroll'));
+
+        // Countdown Timer Logic
+        // Set target date to July 13, 2026 07:00:00 (Example)
+        const targetDate = new Date("July 13, 2026 07:00:00").getTime();
+
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in elements with id
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+            // If the countdown is over
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "<div class='text-2xl md:text-4xl font-bold text-secondary bg-gray-800 p-6 rounded-xl border border-gray-700'>MPLS TELAH DIMULAI!</div>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
